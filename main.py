@@ -1,9 +1,14 @@
+import os
 from google import genai
 
-# The client gets the API key from the environment variable `GEMINI_API_KEY`.
-client = genai.Client()
+print(os.getenv("GEMINI_API_KEY", "未設定")[:15])
 
-response = client.models.generate_content(
-    model="gemini-3-flash-preview", contents="Explain how AI works in a few words"
-)
-print(response.text)
+try:
+    client = genai.Client()
+    response = client.models.generate_content(
+        model="gemini-2.0-flash",
+        contents="介紹樹莓派5"
+    )
+    print(response.text)
+except Exception as e:
+    print(e)
