@@ -1,13 +1,28 @@
-# 虛擬環境
-.venv/
-
-# 環境變數（含API Key）
+# 環境變數（API Keys）
 .env
+.env.local
 
-# Python 暫存
+# Python
 __pycache__/
-*.pyc
-*.pyo
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
 
-# uv 鎖定檔（可選）
-uv.lock
+# Node.js
+node_modules/
+.npm
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# 系統
+.DS_Store
+Thumbs.db
+package.json
+package-lock.json
